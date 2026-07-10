@@ -2,15 +2,17 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.polarsys.capella.core.commandline.core;singleton:=true
-Bundle-Version: 7.0.1.qualifier
+Bundle-Version: 7.1.0.qualifier
 Bundle-Vendor: %providerName
 Require-Bundle: org.polarsys.capella.common.tools.report;visibility:=reexport,
  org.eclipse.core.runtime,
  org.polarsys.capella.core.model.handler,
  org.polarsys.capella.core.application,
  org.polarsys.capella.core.af.integration,
- org.polarsys.capella.commandline.doc
+ org.polarsys.capella.commandline.doc,
+ org.apache.commons.commons-io
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.polarsys.capella.core.commandline.core
+Import-Package: org.apache.log4j;version="1.2.24"
 Bundle-Localization: plugin

@@ -58,7 +58,7 @@ location egit "https://archive.eclipse.org/egit/updates-6.6.1" {
 	org.eclipse.egit.source.feature.group
 }
 
-location orbit "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/milestone/S202604101740" {
+location orbit "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/release/4.40.0" {
 	slf4j.api
 	ch.qos.logback.classic
 	ch.qos.logback.core
@@ -67,7 +67,7 @@ location orbit "https://download.eclipse.org/tools/orbit/simrel/orbit-aggregatio
 	com.google.guava
 }
 
-location sirius "https://download.eclipse.org/sirius/updates/releases/7.4.5/2023-03" {
+location sirius "https://download.eclipse.org/sirius/updates/releases/7.4.14/2023-03" {
 	org.eclipse.sirius.doc.feature.feature.group
 	org.eclipse.sirius.doc.feature.source.feature.group
 	org.eclipse.sirius.runtime.source.feature.group

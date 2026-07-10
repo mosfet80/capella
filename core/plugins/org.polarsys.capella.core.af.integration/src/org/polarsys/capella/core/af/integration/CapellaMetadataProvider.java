@@ -188,7 +188,15 @@ public class CapellaMetadataProvider implements IMetadataProvider {
    * 
    * @see See also org.polarsys.capella.core.data.migration.af.ViewpointMigrationContribution.isMigrationPossible
    */
-  private IStatus isMigrationRequired(Version fileVersion, Version currentVersion) {
+  public IStatus isMigrationRequired(Version fileVersion, Version currentVersion) {
+
+    // If model from 7.0.0 towards 7.0.x, we requires a migration.
+    if (fileVersion.getMajor() == 7 && fileVersion.getMinor() == 0  && fileVersion.getMicro() == 0 && 
+        fileVersion.getMajor() == currentVersion.getMajor() && fileVersion.getMinor() == currentVersion.getMinor() && 
+        fileVersion.getMicro() != currentVersion.getMicro()) {
+      return new Status(IStatus.ERROR, AFIntegrationPlugin.getSymbolicName(),
+          NLS.bind(Messages.WrongCapellaVersionException_DetailedMessage, fileVersion));
+    }
     
     // If model from <MAJOR>.x towards <MAJOR>.y, we requires a migration.
     if (fileVersion.getMajor() == currentVersion.getMajor() && fileVersion.getMinor() != currentVersion.getMinor()) {
@@ -241,12 +249,12 @@ public class CapellaMetadataProvider implements IMetadataProvider {
 
       URI uri = resourceURI.trimFileExtension().appendFileExtension(ViewpointMetadata.STORAGE_EXTENSION);
 
-      progress.beginTask("Create an empty metadata resource", 1);
+      progress.beginTask(Messages.CapellaMetadataProvider_0, 1);
       Resource resource = MetadataHelper.getViewpointMetadata(domain.getResourceSet()).initMetadataStorage(uri);
       progress.worked(1);
 
       try {
-        progress.beginTask("Save metadata model", 1);
+        progress.beginTask(Messages.CapellaMetadataProvider_1, 1);
         resource.save(Collections.emptyMap());
       } catch (Exception e) {
         // we couldn't do this

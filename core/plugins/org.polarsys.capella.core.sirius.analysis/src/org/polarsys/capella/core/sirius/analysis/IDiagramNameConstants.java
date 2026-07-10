@@ -22,7 +22,7 @@ public interface IDiagramNameConstants extends DiagramDescriptionConstants {
   /**
    * Common diagrams
    */
-  String CLASS_BLANK_DIAGRAM_NAME = "Class Diagram Blank";
+  String CLASS_BLANK_DIAGRAM_NAME = "Class Diagram Blank"; //$NON-NLS-1$
   String CONTEXTUAL_COMPONENT_DETAILED_INTERFACES_DIAGRAM_NAME = "Contextual Component Detailed Interfaces"; //$NON-NLS-1$
   String CONTEXTUAL_COMPONENT_EXTERNAL_INTERFACES_DIAGRAM_NAME = "Contextual Component External Interfaces"; //$NON-NLS-1$
   String CONTEXTUAL_COMPONENT_INTERNAL_INTERFACES_DIAGRAM_NAME = "Contextual Component Internal Interfaces"; //$NON-NLS-1$
@@ -87,6 +87,7 @@ public interface IDiagramNameConstants extends DiagramDescriptionConstants {
   String LOGICAL_FUNCTION_BREAKDOWN_DIAGRAM_NAME = "Logical Function Breakdown"; //$NON-NLS-1$
   String LOGICAL_FUNCTIONS_SYSTEM_FUNCTIONS_DIAGRAM_NAME = "Logical Functions - System Functions"; //$NON-NLS-1$
   String LOGICAL_INTERFACE_CONTEXT_INTERFACE_DIAGRAM_NAME = "Logical Interface - Context Interface"; //$NON-NLS-1$
+  String CAPABILITY_REALIZATION_REFINEMENT = "Capability Realization Refinement"; //$NON-NLS-1$
 
   /**
    * Physical Architecture diagrams
